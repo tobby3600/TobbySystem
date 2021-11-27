@@ -7,4 +7,4 @@
 3.输入密码(默认123456)
 4.开始使用(就像CMD一样，可以输入help查询帮助)
 
-# !(https://github.com/tobby3600/TobbySystem/releases)下载
+# !(https://github.com/tobby3600/TobbySystem/releases)[下载]
