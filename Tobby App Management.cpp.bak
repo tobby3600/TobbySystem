@@ -1,0 +1,68 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+struct APPS{
+	string name;
+	double version;
+	string path;
+	string des[51];
+	int des_num;
+}apps[10001];
+int app_num;
+
+void ADD_Defult_APP(){
+	apps[++app_num].name="Queue Program";
+	apps[app_num].version=1.5;
+	apps[app_num].path="RunQueue.bat";
+	apps[app_num].des_num=2;
+	apps[app_num].des[1]="-队列程序,模拟一个队列的操作";
+	apps[app_num].des[2]="-样例应用";
+	
+	apps[++app_num].name="Lynx browser";
+	apps[app_num].version=1.0;
+	apps[app_num].path="RunLynx.bat";
+	apps[app_num].des_num=3;
+	apps[app_num].des[1]="-第三方浏览器";
+	apps[app_num].des[2]="-目前唯一还可用的纯文字浏览器";
+	apps[app_num].des[3]="-附带GUI,但不建议使用"; 
+}
+void PrintApps(){
+	printf("\n应用列表:\n");
+	for(int i=1;i<=app_num;++i){
+		printf("%d.",i);
+		cout<<apps[i].name<<endl;
+		printf("版本:%.2lf\n",apps[i].version);
+		printf("描述:\n");
+		for(int j=1;j<=apps[i].des_num;++j){
+			cout<<apps[i].des[j]<<endl;
+		}
+		printf("\n");
+	}
+}
+int main() {
+	ADD_Defult_APP(); 
+	printf("\n-----Tobby App Management Beta 0.2----\n");
+	printf("选择操作:\n");
+	printf("1.安装应用(制作中)\n");
+	printf("2.打开应用\n");
+	printf("3.返回Main\n");
+	int n;
+	cin>>n;
+	if(n==1){
+		printf("功能制作中...\n");	
+	}else if(n==2){
+		PrintApps();
+		printf("请选择:");
+		int opt;
+		cin>>opt;
+		if(opt>=0&&opt<=app_num){
+			printf("\n-----Start Run App-----\n");
+			system(apps[opt].path.c_str()); 
+			printf("\n-----End Run App-----\n");
+		}else{
+			printf("\nApp未找到\n");
+		}
+	}
+	return 0;
+}

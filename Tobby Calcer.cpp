@@ -1,4 +1,6 @@
 #include<bits/stdc++.h>
+#include "BigInteger.h" //´óÕûÊı
+
 using namespace std;
 int x,y;
 char tmp,ch0;

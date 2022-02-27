@@ -1,0 +1,5 @@
+-start-
+# Welcome!
+! echo This^is^a^Demo!
+! msg Demo
+-end-

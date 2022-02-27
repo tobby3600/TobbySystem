@@ -1,0 +1,55 @@
+echo 输出文字
+echo 123
+123
+
+msg 发送提示
+msg WellDown.
++-----Attention-----+
+|WellDown.          |
+|                   |
+|                   |
+|-------------------|
+|    OK(Input O)    |
++-------------------+
+
+--开发中--
+@ 定义变量
+@ new int i
+新建变量i
+变量类型:
+int - 整数
+char - 字符
+float - 浮点(精度相当于double)
+@ var i = 1
+i赋值为1
+@ var i ++;
+i增加1
+int,float同时支持=,+,-,*,/,%,++,--,+=,-=,*=,/=,%=
+@ var i = %to_float(i)%
+转换i为float
+同时支持: %to_float%,%to_int%
+直接删除小数转换
+引用变量:%i%
+例如
+echo Now:%i%
+2
+用户输入:
+@ new int i input
+
+如果
+@ new int i = 0
+.if (i>1)
+ehco i>1
+.elif (i==1)
+echo i=1
+.else
+ehco i<1
+.endif
+支持的条件判断
+>,<,>=,<=,==
+
+
+
+循环
+for_range(10)
+等同于for(int i=1;i<=10;i++)
